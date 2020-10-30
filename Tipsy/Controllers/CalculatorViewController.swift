@@ -16,6 +16,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
 
+    var eachPersonPays: String?
     
     @IBAction func tipChanged(_ sender: UIButton) {
         
@@ -46,10 +47,18 @@ class CalculatorViewController: UIViewController {
         let splitCheck = Double(splitNumberLabel.text!)
         let totalBill = Double(billTextField.text ?? "0.0")
         
-        let eachPersonPays = String(format: "%.2f",((totalBill! * tipPercentage) / splitCheck!))
+        eachPersonPays = String(format: "%.2f",((totalBill! * tipPercentage) / splitCheck!))
+        
+        self.performSegue(withIdentifier: "goToResult", sender: self)
         
         print(eachPersonPays)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.eachPersonPays = eachPersonPays
+        }
+    }
 }
 

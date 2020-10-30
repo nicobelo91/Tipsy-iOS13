@@ -10,15 +10,20 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    var eachPersonPays: String?
+    
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var settingsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        totalLabel.text = eachPersonPays
 
     }
 
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
 }

@@ -171,6 +171,7 @@
                         <outlet property="tenPctButton" destination="Rwu-A9-VfH" id="hda-9m-46w"/>
                         <outlet property="twentyPctButton" destination="CKa-YD-tVk" id="FUb-EF-fTt"/>
                         <outlet property="zeroPctButton" destination="NIj-D2-Uq5" id="Ofs-nw-RcA"/>
+                        <segue destination="Dnf-m2-FPm" kind="presentation" identifier="goToResult" id="Pdb-WA-D0i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -182,14 +183,14 @@
             <objects>
                 <viewController id="Dnf-m2-FPm" customClass="ResultsViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E4v-0r-cyo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aU-5P-VMi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="399.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="372.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qyh-5W-nmZ">
-                                        <rect key="frame" x="104.5" y="155" width="205.5" height="90"/>
+                                        <rect key="frame" x="104.5" y="141.5" width="205.5" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-0w-mI8">
                                                 <rect key="frame" x="0.0" y="0.0" width="205.5" height="36"/>
@@ -213,7 +214,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-gt-7rc">
-                                <rect key="frame" x="107" y="808" width="200" height="54"/>
+                                <rect key="frame" x="107" y="754" width="200" height="54"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="bJ3-qP-pra"/>
@@ -230,7 +231,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5n-yI-QwU">
-                                <rect key="frame" x="50" y="409.5" width="314" height="117"/>
+                                <rect key="frame" x="50" y="382.5" width="314" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="01N-C1-WYk"/>
                                     <constraint firstAttribute="width" constant="314" id="h24-HD-YAq"/>
